@@ -46,7 +46,9 @@ const AppNavigator = createStackNavigator({
     }
   },
   LocationList: {
-    screen: LocationList
+    screen: LocationList, navigationOptions : {
+      header: null
+    }
   }
 
 });

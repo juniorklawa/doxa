@@ -3,8 +3,8 @@ import {
   View, Text, StyleSheet,
   TouchableOpacity, Image
 } from 'react-native';
-import Icon from 'react-native-vector-icons/FontAwesome';
-
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import StarRating from 'react-native-star-rating';
 
 
 export default class LocalCard extends React.Component {
@@ -36,26 +36,38 @@ export default class LocalCard extends React.Component {
       <View
         key={this.props.i}
         style={styles.projectContainer}>
-        <View style={{ flexDirection: 'row' }}>
-          <View>
+        <View style={{ flexDirection: 'row', }}>
+          <View style={{ justifyContent: 'center', alignItems: 'center' }}>
             <Image
-              style={{ width: 100, height: 150, resizeMode: 'cover' }}
+              style={{ width: 130, height: 150, resizeMode: 'cover', margin: 5, borderRadius: 10, marginTop: 10 }}
               source={this.props.establishment.picture}
             />
           </View>
-          <View style={{ flex: 3, marginLeft: 10 }}>
+          <View style={{ flex: 5, marginLeft: 10, marginTop: 10 }}>
             <Text style={styles.establishmentTitle}>{this.props.establishment.title}</Text>
+            <View style={{ flexDirection: 'row', alignItems: 'center', }}>
+              <Text style={[styles.establishmentTitle, { marginRight: 5, color: '#929699', fontSize: 15 }]}>{this.props.establishment.rating}</Text>
+              <StarRating
+                disabled={false}
+                maxStars={5}
+                starSize={15}
+                containerStyle={{ width: 90 }}
+                fullStarColor={'#FBC02D'}
+                emptyStarColor={'#ddd'}
+                rating={this.props.establishment.rating}
+              />
+            </View>
             <Text style={styles.establishmentDate}>{this.props.establishment.street}</Text>
-            <Text style={styles.establishmentTitle}>{this.props.establishment.rating}</Text>
-            <Text style={styles.establishmentDate}>{this.props.establishment.opened}</Text>
+            <Text style={[styles.establishmentDate, { color: '#388E3C' }]}>{this.props.establishment.opened}</Text>
+            <TouchableOpacity style={{ height: 50, width: '90%', borderRadius: 10, backgroundColor: '#388E3C', marginTop: 20, justifyContent:'center', alignItems:'center' }}>
+            <Text style={{color:'#fff'}}>
+              Detalhes
+            </Text>
+            </TouchableOpacity>
           </View>
-          <View style={{ flex: 2, justifyContent: 'center' }}>
-          
-            <Text style={{ textAlign: 'center', fontWeight: 'bold' }}>{this.props.establishment.reward}</Text>
-          </View>
+
         </View>
-        <View style={{ marginTop: 20 }}>
-        </View>
+
       </View>
     );
   }
@@ -66,14 +78,15 @@ const styles = StyleSheet.create({
     backgroundColor: '#f4f4f4',
   },
 
-  scrollViewContent: {
-    margin: 8,
-    borderRadius: 20
+  myStarStyle: {
+    color: 'yellow',
+    backgroundColor: 'transparent',
+    textShadowColor: 'black',
+    textShadowOffset: { width: 1, height: 1 },
+    textShadowRadius: 2,
   },
-
-  headerImg: {
-    width: '100%',
-    height: 200
+  myEmptyStarStyle: {
+    color: 'white',
   },
 
   headerTitle: {
@@ -111,14 +124,18 @@ const styles = StyleSheet.create({
 
   projectContainer: {
     backgroundColor: '#fbfbfb',
+    borderColor: "#eee",
+    borderWidth: 1,
     justifyContent: 'space-between',
-    borderRadius: 5,
-    marginTop: 20,
-    padding: 15
+    width: '100%',
+    height: 170,
+    marginTop: 4,
+    marginBottom: 4,
+
   },
   establishmentTitle: {
     fontSize: 18,
-    fontWeight: 'bold',
+    fontWeight: '600',
     color: '#4b4b4b',
   },
   establishmentDate: {
