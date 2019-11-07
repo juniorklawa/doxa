@@ -39,11 +39,11 @@ export default class LocalCard extends React.Component {
         <View style={{ flexDirection: 'row', }}>
           <View style={{ justifyContent: 'center', alignItems: 'center' }}>
             <Image
-              style={{ width: 130, height: 150, resizeMode: 'cover', margin: 5, borderRadius: 10, marginTop: 10 }}
+              style={{ width: 120, height: 140, resizeMode: 'cover', margin: 5, borderRadius: 10, marginTop: 10 }}
               source={this.props.establishment.picture}
             />
           </View>
-          <View style={{ flex: 5, marginLeft: 10, marginTop: 10 }}>
+          <View style={{ flex: 5, marginLeft: 5, marginTop: 10 }}>
             <Text style={styles.establishmentTitle}>{this.props.establishment.title}</Text>
             <View style={{ flexDirection: 'row', alignItems: 'center', }}>
               <Text style={[styles.establishmentTitle, { marginRight: 5, color: '#929699', fontSize: 15 }]}>{this.props.establishment.rating}</Text>
@@ -59,7 +59,9 @@ export default class LocalCard extends React.Component {
             </View>
             <Text style={styles.establishmentDate}>{this.props.establishment.street}</Text>
             <Text style={[styles.establishmentDate, { color: '#388E3C' }]}>{this.props.establishment.opened}</Text>
-            <TouchableOpacity style={{ height: 50, width: '90%', borderRadius: 10, backgroundColor: '#388E3C', marginTop: 20, justifyContent:'center', alignItems:'center' }}>
+            <TouchableOpacity 
+            onPress={() => this.props.navigation.navigate('Establishment', {establishment: this.props.establishment})}
+            style={{ height: 50, width: '90%', borderRadius: 10, backgroundColor: '#388E3C', marginTop: 10, justifyContent:'center', alignItems:'center' }}>
             <Text style={{color:'#fff'}}>
               Detalhes
             </Text>
@@ -124,10 +126,9 @@ const styles = StyleSheet.create({
 
   projectContainer: {
     backgroundColor: '#fbfbfb',
-    borderColor: "#eee",
-    borderWidth: 1,
     justifyContent: 'space-between',
-    width: '100%',
+    margin:5,
+    borderRadius:10,
     height: 170,
     marginTop: 4,
     marginBottom: 4,

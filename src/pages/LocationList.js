@@ -59,7 +59,7 @@ class LocationList extends React.Component {
 
     {
 
-      title: 'Babilônia Gastronomia & Cia',
+      title: 'Babilônia Gastronomia',
       rating: 4.2,
       opened: 'Aberto até: 01:00',
       street: 'Avenida Munhoz da Rocha, 1059 - Cabral',
@@ -73,49 +73,22 @@ class LocationList extends React.Component {
 
   render() {
     return (
-      <SafeAreaView>
+      <SafeAreaView style={{flex:1}}>
         <View style={styles.container}>
           <StatusBar backgroundColor="#1B8161" barStyle="light-content" />
-          <View style={{ height: 80, width: '100%', backgroundColor: '#fff', flexDirection: 'row' }}>
-            <View style={{ backgroundColor: 'red', borderRadius: 25, marginVertical: 20, marginHorizontal: 5, justifyContent: 'center' }}>
-              <Picker
-                selectedValue={'this.state.nota'}
-                style={{ height: 50, width: 100 }}
-                onValueChange={(itemValue, itemIndex) =>
-                  this.setState({ nota: itemValue })
-                }>
-                <Picker.Item label="Nota" value="Maior nota" />
 
-              </Picker>
-            </View>
-
-            <View style={{ backgroundColor: 'red', borderRadius: 25, marginVertical: 20, marginHorizontal: 5, justifyContent: 'center' }}>
-              <Picker
-                selectedValue={'this.state.nota'}
-                style={{ height: 50, width: 100 }}
-                onValueChange={(itemValue, itemIndex) =>
-                  this.setState({ nota: itemValue })
-                }>
-                <Picker.Item label="Acessibilidade" value="Maior nota" />
-
-              </Picker>
-            </View>
-
-                        <View style={{ backgroundColor: 'red', borderRadius: 25, marginVertical: 20, marginHorizontal: 5, justifyContent: 'center' }}>
-              <Picker
-                selectedValue={'this.state.nota'}
-                style={{ height: 50, width: 100 }}
-                onValueChange={(itemValue, itemIndex) =>
-                  this.setState({ nota: itemValue })
-                }>
-                <Picker.Item label="Acessibilidade" value="Maior nota" />
-
-              </Picker>
-            </View>
-          </View>
           <ScrollView style={styles.scrollViewContent}>
+            <View style={{justifyContent:'center', alignItems:'center', height:80}}>
+              <Text style={{fontSize:24, color:'#929699'}}>
+                Estabelecimentos
+              </Text>
+            </View>
             {this.state.missions.map((establishment, i) => (
-              <LocalCard establishment={establishment}></LocalCard>
+              
+              <LocalCard 
+              navigation={this.props.navigation}
+              establishment={establishment}></LocalCard>
+              
             ))}
           </ScrollView>
         </View>
@@ -126,11 +99,12 @@ class LocationList extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
+    flex:1,
     backgroundColor: '#f4f4f4',
   },
 
   scrollViewContent: {
-
+    flex:1
   },
 
   headerImg: {

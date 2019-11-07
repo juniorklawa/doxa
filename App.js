@@ -6,6 +6,7 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import Login from './src/pages/Login'
 import Explore from './src/pages/Explore'
 import LocationList from './src/pages/LocationList'
+import Establishment from './src/pages/Establishment'
 
 
 const TabNavigator = createBottomTabNavigator({
@@ -40,16 +41,21 @@ const AppNavigator = createStackNavigator({
       header: null
     }
   },
+  LocationList: {
+    screen: LocationList, navigationOptions: {
+      header: null
+    }
+  },
+  Establishment: {
+    screen: Establishment, navigationOptions: {
+      header: null
+    }
+  },
   Tab: {
     screen: TabNavigator, navigationOptions: {
       header: null
     }
   },
-  LocationList: {
-    screen: LocationList, navigationOptions : {
-      header: null
-    }
-  }
 
 });
 
