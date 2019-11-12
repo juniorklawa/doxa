@@ -65,6 +65,47 @@ class LocationList extends React.Component {
       street: 'Avenida Munhoz da Rocha, 1059 - Cabral',
       picture: require('../assets/babilonia.jpg')
     },
+    //Below
+    {
+
+      title: 'Au-Au Lanches Cabral',
+      rating: 2.1,
+      opened: 'Aberto até: 22:30',
+      street: 'Rua Rio Iriri, 5634 - Cabral',
+      picture: require('../assets/auau.jpg')
+    },
+    {
+
+      title: 'Terra Café - Café & Bistrô',
+      rating: 4.7,
+      opened: 'Aberto até: 23:00',
+      street: 'Av. N. Sra. da Luz, 223',
+      picture: require('../assets/terracafe.jpg')
+    },
+    {
+
+      title: 'Mercearia Bresser',
+      rating: 4.6,
+      opened: 'Aberto até: 01:00',
+      street: 'Av. Munhoz da Rocha, 530 ',
+      picture: require('../assets/bresser.jpg')
+    },
+    {
+
+      title: 'Fernandes Restaurante',
+      rating: 3.5,
+      opened: 'Aberto até: 01:00',
+      street: 'Avenida Munhoz da Rocha, 1059 - Cabral',
+      picture: require('../assets/fernandes.jpg')
+    },
+    {
+
+      title: 'Coco Bambu Curitiba',
+      rating: 4.2,
+      opened: 'Aberto até: 01:00',
+      street: 'Rua Paissandu, 91',
+      picture: require('../assets/cocobambu.jpg')
+    },
 
 
 
@@ -78,11 +119,6 @@ class LocationList extends React.Component {
           <StatusBar backgroundColor="#1B8161" barStyle="light-content" />
 
           <ScrollView style={styles.scrollViewContent}>
-            <View style={{justifyContent:'center', alignItems:'center', height:80}}>
-              <Text style={{fontSize:24, color:'#929699'}}>
-                Estabelecimentos
-              </Text>
-            </View>
             {this.state.missions.map((establishment, i) => (
               
               <LocalCard 

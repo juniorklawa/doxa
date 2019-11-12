@@ -22,7 +22,7 @@ class Login extends React.Component {
           <View style={{ justifyContent: 'center', alignItems: 'center', height: '100%' }}>
             <Image
               resizeMode='contain'
-              style={{ height: 100, alignItems: 'center', justifyContent: 'center', marginTop: -100, marginBottom: 30 }}
+              style={{ height: 100, alignItems: 'center', justifyContent: 'center', marginTop: -150, marginBottom: 30 }}
               source={require('../assets/logo.png')}
             />
             <View>
@@ -37,7 +37,7 @@ class Login extends React.Component {
                 placeholderTextColor="#999"
               />
               <TouchableOpacity 
-              onPress={() =>  this.props.navigation.navigate('Explore')}
+              onPress={() =>  this.props.navigation.navigate('Explorar')}
               style={{ height: 50, backgroundColor: '#00897B', borderRadius: 5, marginTop: 30, justifyContent: 'center', alignItems: 'center' }}>
                 <Text style={{ fontWeight: 'bold', color: '#fff' }}>
                   Entrar

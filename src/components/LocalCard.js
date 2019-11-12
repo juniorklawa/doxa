@@ -136,6 +136,7 @@ const styles = StyleSheet.create({
   },
   establishmentTitle: {
     fontSize: 18,
+
     fontWeight: '600',
     color: '#4b4b4b',
   },
