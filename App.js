@@ -9,13 +9,14 @@ import Explore from './src/pages/Explore'
 import LocationList from './src/pages/LocationList'
 import Establishment from './src/pages/Establishment'
 import Ranking from './src/pages/Ranking'
+import Profile from './src/pages/Profile'
 
 
 const TabNavigator = createBottomTabNavigator({
   Explorar: Explore,
   Ranking: Ranking,
   Promoções: Explore,
-  Perfil: Explore
+  Perfil: Profile
 }, {
   defaultNavigationOptions: ({ navigation }) => ({
     tabBarIcon: ({ tintColor }) => {

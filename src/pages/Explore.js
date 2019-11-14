@@ -45,7 +45,7 @@ class Explore extends React.Component {
             <View style={{ justifyContent: 'center', alignItems: 'center' }}>
               <TouchableOpacity
                 onPress={() => this.props.navigation.navigate('LocationList')}
-                style={{ height: 65, width: 65, borderRadius: 65 / 2, backgroundColor: '#4385F5', justifyContent: 'center', alignItems: 'center' }}>
+                style={{ height: 60, width: 60, borderRadius: 60 / 2, backgroundColor: '#4385F5', justifyContent: 'center', alignItems: 'center' }}>
                 <Image
                   resizeMode='contain'
                   style={{ height: '45%', width: '45%', alignItems: 'center', justifyContent: 'center', }}
@@ -57,7 +57,7 @@ class Explore extends React.Component {
                 </Text>
             </View>
             <View style={{ justifyContent: 'center', alignItems: 'center' }}>
-              <TouchableOpacity style={{ height: 65, width: 65, borderRadius: 65 / 2, backgroundColor: '#E84335', justifyContent: 'center', alignItems: 'center' }}>
+              <TouchableOpacity style={{ height: 60, width: 60, borderRadius: 60 / 2, backgroundColor: '#E84335', justifyContent: 'center', alignItems: 'center' }}>
                 <Image
                   resizeMode='contain'
                   style={{ height: '45%', width: '45%', alignItems: 'center', justifyContent: 'center', }}
@@ -69,7 +69,7 @@ class Explore extends React.Component {
                 </Text>
             </View>
             <View style={{ justifyContent: 'center', alignItems: 'center' }}>
-              <TouchableOpacity style={{ height: 65, width: 65, borderRadius: 65 / 2, backgroundColor: '#EFB657', justifyContent: 'center', alignItems: 'center' }}>
+              <TouchableOpacity style={{ height: 60, width: 60, borderRadius: 60 / 2, backgroundColor: '#EFB607', justifyContent: 'center', alignItems: 'center' }}>
                 <Image
                   resizeMode='contain'
                   style={{ height: '45%', width: '45%', alignItems: 'center', justifyContent: 'center', }}
@@ -85,7 +85,7 @@ class Explore extends React.Component {
 
           <View style={{ flexDirection: 'row', justifyContent: 'space-evenly', marginTop: 18 }}>
             <View style={{ justifyContent: 'center', alignItems: 'center' }}>
-              <TouchableOpacity style={{ height: 65, width: 65, borderRadius: 65 / 2, backgroundColor: '#36A951', justifyContent: 'center', alignItems: 'center' }}>
+              <TouchableOpacity style={{ height: 60, width: 60, borderRadius: 60 / 2, backgroundColor: '#36A951', justifyContent: 'center', alignItems: 'center' }}>
                 <Image
                   resizeMode='contain'
                   style={{ height: '45%', width: '45%', alignItems: 'center', justifyContent: 'center', }}
@@ -97,7 +97,7 @@ class Explore extends React.Component {
                 </Text>
             </View>
             <View style={{ justifyContent: 'center', alignItems: 'center' }}>
-              <TouchableOpacity style={{ height: 65, width: 65, borderRadius: 65 / 2, backgroundColor: '#fd7b14', justifyContent: 'center', alignItems: 'center' }}>
+              <TouchableOpacity style={{ height: 60, width: 60, borderRadius: 60 / 2, backgroundColor: '#fd7b14', justifyContent: 'center', alignItems: 'center' }}>
                 <Image
                   resizeMode='contain'
                   style={{ height: '45%', width: '45%', alignItems: 'center', justifyContent: 'center', }}
@@ -109,7 +109,7 @@ class Explore extends React.Component {
                 </Text>
             </View>
             <View style={{ justifyContent: 'center', alignItems: 'center' }}>
-              <TouchableOpacity style={{ height: 65, width: 65, borderRadius: 65 / 2, backgroundColor: '#FA359E', justifyContent: 'center', alignItems: 'center' }}>
+              <TouchableOpacity style={{ height: 60, width: 60, borderRadius: 60 / 2, backgroundColor: '#FA359E', justifyContent: 'center', alignItems: 'center' }}>
                 <Image
                   resizeMode='contain'
                   style={{ height: '45%', width: '45%', alignItems: 'center', justifyContent: 'center', }}
@@ -127,7 +127,7 @@ class Explore extends React.Component {
           <View style={{ justifyContent: 'center', alignItems: 'center', marginTop: 10, borderRadius: 10 }}>
             <Image
               resizeMode='cover'
-              style={{ height: 380, width: '100%', alignItems: 'center', justifyContent: 'center', }}
+              style={{ height: 400, width: '100%', alignItems: 'center', justifyContent: 'center', }}
               source={require('../assets/map.png')}
             />
           </View>

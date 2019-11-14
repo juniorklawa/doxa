@@ -122,6 +122,7 @@ class LocationList extends React.Component {
             {this.state.missions.map((establishment, i) => (
               
               <LocalCard 
+              key={i}
               navigation={this.props.navigation}
               establishment={establishment}></LocalCard>
               
